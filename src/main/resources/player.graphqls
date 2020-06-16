@@ -1,0 +1,14 @@
+extend type Query {
+    players(teamId: ID!): [Player]
+}
+
+type Player {
+    teamId: ID!
+    name: String!
+    year: Int
+    avgScore: Float
+}
+
+extend type Mutation {
+    newPlayer(teamId: ID!, name: String!, year: Int, avgScore: Float): Player!
+}
